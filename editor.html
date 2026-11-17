@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#10151d">
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./editor.css">
+  <title>Editor • Central de Links</title>
+  <script src="./data/site.js" defer></script>
+  <script src="./editor.js" defer></script>
+</head>
+<body>
+  <div class="dashboard">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">✳</div><div><strong>Central de Links</strong><span>Editor visual</span></div></div>
+      <a class="open-site" href="./index.html" target="_blank" rel="noopener">Ver site <span aria-hidden="true">↗</span></a>
+    </header>
+    <div class="intro">
+      <span class="eyebrow">SEU CONTEÚDO, SUAS REGRAS</span>
+      <h1>Edite seus links<span>.</span></h1>
+      <p>Adicione, organize ou remova quantos links quiser. Confira a prévia ao lado e baixe o arquivo atualizado.</p>
+    </div>
+    <div class="notice" role="note"><span aria-hidden="true">ⓘ</span><div><strong>Importante: este editor não publica sozinho.</strong><p>Ao terminar, clique em <b>Baixar site.js</b> e substitua <code>data/site.js</code> no seu repositório GitHub. Só você, com acesso ao repositório, pode publicar as alterações.</p></div></div>
+    <div class="workspace">
+      <main class="edit-column">
+        <section class="editor-panel" aria-labelledby="profileTitle">
+          <div class="panel-header"><div><span class="step">01 / PERFIL</span><h2 id="profileTitle">Identidade da página</h2></div><span class="mini-mark">✳</span></div>
+          <div class="fields-grid">
+            <label class="field"><span>Nome da página</span><input data-profile="name" type="text" placeholder="Meu projeto"></label>
+            <label class="field"><span>Identificador</span><input data-profile="handle" type="text" placeholder="@meuperfil"></label>
+            <label class="field span-two"><span>Descrição</span><textarea data-profile="bio" rows="3" placeholder="Fale um pouquinho sobre você ou o seu projeto"></textarea></label>
+            <label class="field span-two"><span>URL da foto (opcional)</span><input data-profile="avatar" type="url" placeholder="https://site.com/minha-foto.jpg"><small>Sem foto? Usaremos o símbolo abaixo.</small></label>
+            <label class="field"><span>Símbolo / emoji</span><input data-profile="symbol" type="text" maxlength="8" placeholder="✦"></label>
+            <label class="field"><span>Cor de destaque</span><span class="color-control"><input data-profile="accent" type="color" aria-label="Selecionar cor"><span id="hexColor">#c6f68d</span></span></label>
+            <label class="field span-two"><span>Mensagem do rodapé</span><input data-profile="footer" type="text" placeholder="Obrigado pela visita!"></label>
+          </div>
+        </section>
+
+        <section class="editor-panel" aria-labelledby="linksTitle">
+          <div class="panel-header"><div><span class="step">02 / CONTEÚDO</span><h2 id="linksTitle">Seus links <span class="number" id="totalLinks">0</span></h2></div></div>
+          <div class="help-text">A ordem abaixo é a ordem dos links dentro de cada categoria. Os links desativados não aparecem no site.</div>
+          <div class="edit-list" id="editList"></div>
+          <button type="button" class="add-link" id="addLink">＋ Adicionar novo link</button>
+        </section>
+
+        <section class="publish-panel" aria-labelledby="publishTitle">
+          <div><span class="step">03 / PUBLICAR</span><h2 id="publishTitle">Tudo pronto?</h2><p>Suas mudanças ficam guardadas como rascunho neste navegador até você baixar e enviar o arquivo para o GitHub.</p></div>
+          <button class="download-button" id="downloadButton" type="button">↓ Baixar site.js</button>
+          <button class="reset-button" id="resetButton" type="button">Descartar rascunho e recarregar site.js</button>
+          <p class="save-state" id="saveState" role="status" aria-live="polite">Rascunho salvo neste navegador.</p>
+        </section>
+      </main>
+      <aside class="preview-column" aria-label="Prévia da página">
+        <div class="preview-sticky"><div class="preview-header"><span>PRÉVIA AO VIVO</span><span class="preview-indicator"><span></span> Atualizando</span></div>
+          <div class="phone-shell"><div class="phone-notch"></div><div class="phone-inner"><div class="mini-topline">✳ <span>LINKS EM UM SÓ LUGAR</span></div><div class="mini-profile"><div class="mini-avatar" id="previewAvatar">✦</div><small id="previewHandle">@seuperfil</small><h3 id="previewName">Minha central de links</h3><p id="previewBio">Tudo em um só lugar.</p></div><div class="mini-label">SEUS LINKS <span id="previewCount">0</span></div><div id="previewLinks" class="mini-links"></div><div class="mini-footer" id="previewFooter">Obrigado pela visita!</div></div></div>
+          <p class="preview-note">A prévia mostra a aparência aproximada no celular. Para testar os botões, abra o site público.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

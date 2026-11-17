@@ -1,7 +1,7 @@
 /* Configuração do seu site. Use editor.html para editar visualmente. */
 window.LINKTREE_DATA = {
   "profile": {
-    "name": "Projeto Anti-racista ",
+    "name": "Projeto Antirracista",
     "handle": "",
     "bio": "Primeira Mostra de Tecnologia Linguagens 2026",
     "avatar": "",

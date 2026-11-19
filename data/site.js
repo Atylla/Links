@@ -49,6 +49,16 @@ window.LINKTREE_DATA = {
       "category": "Projeto de Tecnologia e Linguagens",
       "featured": false,
       "enabled": true
+    },
+    {
+      "id": "link-1795101291576-0za9",
+      "title": "Registros do Projeto",
+      "description": "",
+      "url": "https://atylla.github.io/Museu/#projeto/projeto-mwnoglpb-j4vr",
+      "icon": "🔗",
+      "category": "Projeto de Tecnologia e Linguagens",
+      "featured": false,
+      "enabled": true
     }
   ]
 };

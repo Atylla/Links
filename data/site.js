@@ -46,7 +46,7 @@ window.LINKTREE_DATA = {
       "description": "",
       "url": "https://create.kahoot.it/share/agosto-lilas/49c34a1b-f3f4-4466-aa2a-d8cf980d0072",
       "icon": "🔗",
-      "category": "Meus links",
+      "category": "Projeto de Tecnologia e Linguagens",
       "featured": false,
       "enabled": true
     }
